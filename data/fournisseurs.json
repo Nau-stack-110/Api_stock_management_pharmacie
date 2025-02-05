@@ -1,0 +1,44 @@
+[
+  {
+    "id": "F001",
+    "nom": "Laboratoire ABC",
+    "adresse": "123 Rue de la Santé",
+    "telephone": "0123456789"
+  },
+  {
+    "id": "F002",
+    "nom": "Laboratoire XYZ",
+    "adresse": "456 Avenue des Médicaments",
+    "telephone": "0987654321"
+  },
+  {
+    "id": "F003",
+    "nom": "Laboratoire LMN",
+    "adresse": "789 Boulevard de l'Innovation",
+    "telephone": "0147258369"
+  },
+  {
+    "id": "F004",
+    "nom": "Laboratoire DEF",
+    "adresse": "321 Rue de la Cure",
+    "telephone": "0123987654"
+  },
+  {
+    "id": "F005",
+    "nom": "Laboratoire GHI",
+    "adresse": "654 Route de la Santé",
+    "telephone": "0765432198"
+  },
+  {
+    "id": "F006",
+    "nom": "Laboratoire JKL",
+    "adresse": "987 Chemin des Soins",
+    "telephone": "0234567891"
+  },
+  {
+    "id": "F007",
+    "nom": "Laboratoire MNO",
+    "adresse": "159 Avenue des Pharmacies",
+    "telephone": "0345678912"
+  }
+] 
