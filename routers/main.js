@@ -7,6 +7,7 @@ const adminRouter = require("./admin");
 const productRouter = require("./product");
 const orderRouter = require("./order");
 const orderDetailsRouter = require("./orderdetail");
+const reportsRouter = require("./reports");
 
 
 mainRouter.use("/auth", authRouter);
@@ -15,6 +16,7 @@ mainRouter.use("/users", userRouter);
 mainRouter.use("/products", productRouter);
 mainRouter.use("/orders", orderRouter);
 mainRouter.use("/order-details", orderDetailsRouter);
+mainRouter.use("/reports", reportsRouter);
 
 
 

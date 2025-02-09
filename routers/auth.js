@@ -6,7 +6,7 @@ router.post("/", authController.createAdmin);
 router.post("/forgot/password", authController.forgotpassword);
 router.post("/reset/password", authController.resetpassword);
 
-router.post("/register", authController.register);
+router.post("/signup", authController.register);
 router.post("/login", authController.login);
 
 
