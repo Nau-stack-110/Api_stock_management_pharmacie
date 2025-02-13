@@ -10,9 +10,9 @@ router.get('/:id', [CheckToken], productController.getProductById);
 router.post('/', [CheckToken, CheckAdmin], productController.createProduct);
 router.post('/betsaka', [CheckToken, CheckAdmin], productController.createProductPls);
 
-router.put('/:id/update/', [CheckToken, CheckAdmin], productController.updateProductById);
+router.put('/:id', [CheckToken, CheckAdmin], productController.updateProductById);
 
-router.delete('/:id/delete/', [CheckToken, CheckAdmin], productController.deleteProductById);
+router.delete('/:id', [CheckToken, CheckAdmin], productController.deleteProductById);
 router.delete('/delete/all/', [CheckToken, CheckAdmin], productController.deleteAllProduct);
 
 

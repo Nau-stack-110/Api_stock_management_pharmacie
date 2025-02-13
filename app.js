@@ -12,7 +12,12 @@ app.use(express.urlencoded({extended: true,}));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true,}));
 app.use(morgan('dev'));
-app.use(cors());
+// app.use(cors());
+app.use(cors({
+    origin: 'http://localhost:5173', 
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+  }));
 app.use('/api', mainRouter);
 
-module.exports = app;
+module.exports = app; 

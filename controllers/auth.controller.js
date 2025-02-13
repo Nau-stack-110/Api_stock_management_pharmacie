@@ -77,7 +77,7 @@ const login = async (req, res) =>{
         }
         const token = jwt.sign({
             id:user.id, name:user.name, email:user.email, role:user.role_id,
-        }, process.env.SECRET_KEY, {expiresIn:'1h'});
+        }, process.env.SECRET_KEY, {expiresIn:'1d'});
         res.status(200).send({token, message:"Successfully login"});
     } catch (e) {
         return res.status(500).send({
