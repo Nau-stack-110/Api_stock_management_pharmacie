@@ -116,4 +116,36 @@ exports.getMonthlySalesReport = async (req, res) => {
     console.error(err);
     res.status(500).json({ error: "Erreur interne du serveur" });
   }
+};
+
+/**
+ * Rapport de rotation des stocks
+ * Calcule le ratio (quantité vendue / stock actuel) pour chaque produit
+ */
+exports.getStockRotation = async (req, res) => {
+  try {
+    const stockRotation = await OrderDetail.findAll({
+      attributes: [
+        'product_id',
+        [sequelize.fn('SUM', sequelize.col('OrderDetail.quantite')), 'totalSold'],
+        [sequelize.col('Product.quantite'), 'currentStock'],
+        [
+          sequelize.literal('ROUND(COALESCE(SUM(OrderDetail.quantite) / NULLIF(Product.quantite, 0), 0), 2)'),
+          'rotationRatio'
+        ]
+      ],
+      include: [{
+        model: Product,
+        attributes: ['nom', 'categorie', 'reference', 'quantite']
+      }],
+      group: ['product_id', 'Product.id'],
+      order: [[sequelize.literal('rotationRatio'), 'DESC']],
+      limit: 20
+    });
+
+    res.status(200).json(stockRotation);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Erreur interne du serveur" });
+  }
 }; 

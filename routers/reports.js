@@ -8,5 +8,6 @@ router.get('/sales/seller/:sellerId',[CheckToken, CheckAdmin], reportController.
 router.get('/sales/daily',[CheckToken, CheckAdmin], reportController.getDailySalesReport);
 router.get('/sales/weekly',[CheckToken, CheckAdmin], reportController.getWeeklySalesReport);
 router.get('/sales/monthly', [CheckToken, CheckAdmin], reportController.getMonthlySalesReport);
+router.get('/rotate-stock', [CheckToken, CheckAdmin], reportController.getStockRotation);
 
 module.exports = router;

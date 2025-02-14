@@ -6,6 +6,7 @@ exports.getAllOrders = async (req, res) => {
       include: [
         {
           model: OrderDetail,
+          attributes: ['id', 'product_id', 'order_id', 'quantite', 'unit_price']
         },
         {
           model: User,
