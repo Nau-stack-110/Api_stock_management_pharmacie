@@ -1,16 +1,12 @@
-# Lien du projet en production
-- (https://api-taxibe-mada.up.railway.app/)
+# API REST MANAGEMENT_PHARMACIE
 
-# API REST Réservation TaxiBe Coopérative à Madagascar
-
-Une API REST permettant la gestion de réservations de taxi pour plusieurs coopératives de taxis à Madagascar. Ce projet utilise Node.js, Express, Sequelize-CLI, MySQL et d'autres technologies pour la gestion des réservations et la génération de PDF.
+Une API REST permettant la gestion de stock dans un pharmacie à Madagascar. Ce projet utilise Node.js, Express, Sequelize-CLI, MySQL et d'autres technologies pour la gestion de stock ou produits pharmaceutique.
 
 ## 🚀 Table des matières
 
 1. [Technologies utilisées](#technologies-utilisées)
-2. [Routes et méthodes](#routes-et-méthodes)
-3. [Dépendances](#dépendances)
-4. [Scripts](#scripts)
+2. [Dépendances](#dépendances)
+3. [Scripts](#scripts)
 
 ## 🚀 Technologies utilisées
 
@@ -25,88 +21,6 @@ Une API REST permettant la gestion de réservations de taxi pour plusieurs coop�
 ![Node.js](https://img.shields.io/badge/Node.js-v16.13.0-green)
 ![Express](https://img.shields.io/badge/Express-v4.17.1-blue)
 ![MySQL](https://img.shields.io/badge/MySQL-v8.0.26-red)
-
-## Routes et méthodes
-## table Cooperative et méthodes
-| Route                     | Méthode | Description                                      | Utilisateur  | Admin  |
-|---------------------------|---------|--------------------------------------------------|--------------|--------|  
-| `/auth/signup`                  | POST     | Créer un nouveau compte utilisateur                      | ✅            | ✅      |
-| `/auth/login`              | POST     | Connexion de l'utilisateur                    | ✅            | ✅      |
-| `/auth/forgot/password`                 | POST    | Changer le mot de passe oublié                           | ✅            | ✅      |
-| `/auth/reset/password`              | POST  | Réinitialiser le mot de passe utilisateur               | ✅            | ✅      |
-
-
-
-## table Taxibes
-| Route                     | Méthode | Description                                      | Utilisateur  | Admin  |
-|---------------------------|---------|--------------------------------------------------|--------------|--------|  
-| `/taxibe`                  | GET     | Liste des taxis disponibles                      | ✅            | ✅      |
-| `/taxibe/:id`              | GET     | Détails d'un taxi spécifique                     | ✅            | ✅      |
-| `/taxibe/`                 | POST    | Créer un nouvel taxibe                           | ❌            | ✅      |
-| `/taxibe/:id`              | DELETE  | Supprimer un taxibe spécifique               | ❌            | ✅      |
-| `/taxibe/:id`              | PUT     | Mettre à jour les taxibes                     | ❌            | ✅      |
-
-
-## table Routes et méthodes
-| Route                     | Méthode | Description                                      | Utilisateur  | Admin  |
-|---------------------------|---------|--------------------------------------------------|--------------|--------|  
-| `/route`                  | GET     | Liste des routes disponibles                      | ✅            | ✅      |
-| `/route/:id`              | GET     | Détails d'un route spécifique                     | ✅            | ✅      |
-| `/route/`                 | POST    | Créer un nouvel route                           | ❌            | ✅      |
-| `/route/:id`              | DELETE  | Supprimer un route spécifiques                | ❌            | ✅      |
-| `/route/:id`              | PUT     | Mettre à jour un routes                             | ❌            | ✅      |
-
-
-## table Trajets et méthodes
-| Route                     | Méthode | Description                                      | Utilisateur  | Admin  |
-|---------------------------|---------|--------------------------------------------------|--------------|--------|  
-| `/trajet`                  | GET     | Liste des trajets disponibles                      | ✅            | ✅      |
-| `/trajet/:id`              | GET     | Détails d'un trajet spécifique                     | ✅            | ✅      |
-| `/trajet/`                 | POST    | Créer un nouvel trjajet                           | ❌            | ✅      |
-| `/trajet/:id`              | DELETE  | Supprimer un trajet spéchifique               | ❌            | ✅      |
-| `/trajet/:id`              | PUT     | Mettre à jour un trajet                      | ❌            | ✅      |
-
-
-## table Cooperative et méthodes
-| Route                     | Méthode | Description                                      | Utilisateur  | Admin  |
-|---------------------------|---------|--------------------------------------------------|--------------|--------|  
-| `/cooperative`                  | GET     | Liste des cooperative disponibles                      | ✅            | ✅      |
-| `/cooperative/:id`              | GET     | Détails d'un cooperative spécifique                     | ❌            | ✅      |
-| `/cooperative/`                 | POST    | Créer un nouvel cooperative                           | ❌            | ✅      |
-| `/cooperative/:id`              | DELETE  | Supprimer un cooperative spéchifique               | ❌            | ✅      |
-| `/cooperative/:id`              | PUT     | Mettre à jour un cooperative                      | ❌            | ✅      |
-
-
-## table Utilisateur et bookings and ticket
-| Route                     | Méthode | Description                                      | Utilisateur  | Admin  |
-|---------------------------|---------|--------------------------------------------------|--------------|--------|  
-| `/users/me`                  | GET     | Récuperer le profil de l'utilisateur connecté                      | ✅            | ❌      |
-| `/users/me`              | PUT     | Mettre à jour le profile de l'utilisateur connecté                     | ✅            | ❌      |
-| `/users/password/change`                 | PUT    | Modifier le mot de passe de l'utilisateur connecté                           | ✅            | ❌      |
-| `/users/me/delete`              | DELETE  | Supprimer un compte de l'utilisateur connecté               | ✅            | ❌      |
-| `/users/generate-ticket/:id`              | POST     | Generer un ticket pour la réservation de l'utilisateur connecté                      | ✅            | ❌      |
-| `/users/verify-ticket/:id`              | POST     | Verifier un code ticket pour la réservation de l'utilisateur connecté                      | ✅            | ❌      |
-| `/users/booking/create`              | POST    | Créer une réservation du taxibe pour l'utilisateur connecté                    | ✅            | ❌      |
-| `/users/booking/me`              | GET     | Lister la réservation de l'utilisateur connecté                      | ✅            | ❌      |
-| `/users/booking/me`              | DELETE     | Supprimer ou annuler la réservation de l'utilisateur connecté                      | ✅            | ❌      |
-
-
-
-## statistiques et administration
-| Route                     | Méthode | Description                                      | Utilisateur  | Admin  |
-|---------------------------|---------|--------------------------------------------------|--------------|--------|  
-| `/admin/stats`                  | GET     | Liste des statistiques disponibles                      | ❌            | ✅      |
-| `/admin/booking`                  | GET     | Liste des réservations                     | ❌            | ✅      |
-| `/admin/booking/:id`                  | GET     | Details d'une réservation spécifique                     | ❌            | ✅      |
-| `/admin/users`              | GET     | Listes des utilisateurs                      |❌            | ✅      |
-| `/admin/users/:id`                 | GET    | Details d'un utilisateur spécifique                           | ❌            | ✅      |
-| `/admin/users/:id`              | DELETE  | Supprimer un utilisateur spéchifique             | ❌            | ✅      |
-| `/admin/me`              | GET     | Detais du profile de l'admin                    | ❌            | ✅      |
-| `/admin/me`              | PUT     | Mettre à jour le profile de l'admin                    | ❌            | ✅      |
-| `/admin/password/change`              | PUT     | Changer le mot de passe de l'admin                    | ❌            | ✅      |
-| `/admin/cooperative/:cooperativeId/admin`              | POST     | Creer un admin pour un cooperative spécifique                 | ❌            | ✅      |
-
-
 
 
 ## Dépendances

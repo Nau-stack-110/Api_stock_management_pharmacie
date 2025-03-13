@@ -1,0 +1,103 @@
+# POST http://localhost:4000/api/auth/login/
+# Content-Type: application/json
+
+# {
+#   "email": "andriatahianaarnaud@gmail.com",
+#   "password": "Naunau"
+# }
+
+
+GET http://localhost:4000/api/products/1/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkFybmF1ZCwiLCJlbWFpbCI6ImFuZHJpYXRhaGlhbmFhcm5hdWRAZ21haWwuY29tIiwicm9sZSI6MSwiaWF0IjoxNzQxODU5NjkzLCJleHAiOjE3NDE5NDYwOTN9.S3kmy-1CcY94PCjqBitrq2UIjWXdxZEOyTBfT3MN93g
+
+{
+     "quantite": 45
+}
+
+# POST http://localhost:4000/api/products/betsaka/
+# Content-Type: application/json
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkFybmF1ZCwiLCJlbWFpbCI6ImFuZHJpYXRhaGlhbmFhcm5hdWRAZ21haWwuY29tIiwicm9sZSI6MSwiaWF0IjoxNzQxODU4Mjg1LCJleHAiOjE3NDE5NDQ2ODV9.o9PiJu6SiR6nWLHBdfbt5DfzqMIQYCiJYY5a60wXeEg
+
+# [
+#   {
+#     "nom": "Aspirine",
+#     "reference": "ASP-001",
+#     "categorie": "Analgesique",
+#     "prix": 3,
+#     "quantite": 100,
+#     "fournisseur": "Laboratoire ABC"
+#   },
+#   {
+#     "nom": "Ibuprofène",
+#     "reference": "IBU-002",
+#     "categorie": "Anti-inflammatoire",
+#     "prix": 5,
+#     "quantite": 80,
+#     "fournisseur": "Laboratoire XYZ"
+#   },
+#   {
+#     "nom": "Paracétamol",
+#     "reference": "PAR-003",
+#     "categorie": "Antipyrétique",
+#     "prix": 3,
+#     "quantite": 150,
+#     "fournisseur": "Laboratoire ABC"
+#   },
+#   {
+#     "nom": "Amoxicilline",
+#     "reference": "AMX-004",
+#     "categorie": "Antibiotique",
+#     "prix": 12,
+#     "quantite": 50,
+#     "fournisseur": "Laboratoire LMN"
+#   },
+#   {
+#     "nom": "Oméprazole",
+#     "reference": "OME-005",
+#     "categorie": "Anti-ulcéreux",
+#     "prix": 15,
+#     "quantite": 60,
+#     "fournisseur": "Laboratoire DEF"
+#   },
+#   {
+#     "nom": "Loratadine",
+#     "reference": "LOR-006",
+#     "categorie": "Antihistaminique",
+#     "prix": 8,
+#     "quantite": 70,
+#     "fournisseur": "Laboratoire GHI"
+#   },
+#   {
+#     "nom": "Metformine",
+#     "reference": "MET-007",
+#     "categorie": "Antidiabétique",
+#     "prix": 10,
+#     "quantite": 90,
+#     "fournisseur": "Laboratoire ABC"
+#   },
+#   {
+#     "nom": "Simvastatine",
+#     "reference": "SIM-008",
+#     "categorie": "Hypolipémiant",
+#     "prix": 9,
+#     "quantite": 100,
+#     "fournisseur": "Laboratoire JKL"
+#   },
+#   {
+#     "nom": "Amlodipine",
+#     "reference": "AML-009",
+#     "categorie": "Antihypertenseur",
+#     "prix": 11,
+#     "quantite": 85,
+#     "fournisseur": "Laboratoire MNO"
+#   },
+#   {
+#     "nom": "Ciprofloxacine",
+#     "reference": "CIP-010",
+#     "categorie": "Antibiotique",
+#     "prix": 20,
+#     "quantite": 40,
+#     "fournisseur": "Laboratoire LMN"
+#   }
+# ] 
